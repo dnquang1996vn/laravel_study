@@ -10882,3 +10882,47 @@ a.text-dark:focus {
   }
 }
 
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  align-items: stretch;
+  background-color: whitesmoke;
+  flex: 1;
+}
+
+#header {
+  color: white;
+  background-color: #38B4C9;
+}
+
+#sidebar {
+  color: #9FA9BC;
+  background-color: #FFFFFF;
+  width: 200px;
+}
+
+#sidebar .nav-item {
+  background-color: #8f8f8f;
+  height: 40px;
+  padding: 10px;
+  color: white;
+  margin-bottom: 5px;
+}
+
+#sidebar .nav-item:hover {
+  background-color: #9c9c9c;
+}
+
+#content {
+  background-color: #FFFFFF;
+  flex: 1;
+  margin: 30px;
+  border: 0.5px solid #cccccc;
+  padding: 30px;
+}
+

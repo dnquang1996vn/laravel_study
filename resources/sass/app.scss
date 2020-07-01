@@ -6,3 +6,46 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    align-items: stretch;
+    background-color: whitesmoke;
+    flex: 1;
+}
+
+#header {
+    color: white;
+    background-color: #38B4C9;
+}
+
+#sidebar {
+    color: #9FA9BC;
+    background-color: #FFFFFF;
+    width: 200px;
+
+    .nav-item {
+        background-color: darken(whitesmoke, 40%);
+        height: 40px;
+        padding: 10px;
+        color: white;
+        margin-bottom: 5px;
+        &:hover {
+            background-color: darken(whitesmoke, 35%);
+        }
+    }
+}
+
+#content {
+    background-color: #FFFFFF;
+    flex: 1;
+    margin: 30px;
+    border: 0.5px solid lighten(black, 80%);
+    padding: 30px;
+}

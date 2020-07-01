@@ -1,23 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
-            </div>
+    <h1>Chăm sóc khách hàng. Gửi email</h1>
+    <form action=" {!! route('sendMail') !!}" method="POST">
+        @csrf
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
-    </div>
-</div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Nội dung </label>
+            <input type="text" class="form-control" id="exampleInputPassword1" name="content">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 @endsection
